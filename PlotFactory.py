@@ -696,7 +696,8 @@ class PlotFactory:
               else:
                 histo_total = None
             else:
-              histo_total = fileIn.Get(special_shapeName)
+              histo_total = None
+            # histo_total = fileIn.Get(special_shapeName)
 
             if variable['divideByBinWidth'] == 1 and histo_total != None:
               histo_total.Scale(1,"width")
@@ -2651,3 +2652,4 @@ class PlotFactory:
       elif type(color) == str:
         # hex string
         return ROOT.TColor.GetColor(color)
+
